@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for post in posts %}
+<div class="container">
+<div class="row">
+	<div class="col-xs-3">
+	</div>
+	<div class="col-xs-5">
+	
+		<table>
+		<tr>
+			<td>Author:</td>
+			<td>{{post.author }}</td>
+		</tr>
+		<tr>
+			<td>Title:</td>
+			<td>{{post.title }}</td>
+		</tr>
+		<tr>
+			<td colspan=2>{{post.text }}<br>{{post.created_date }}<br></td>
+		</tr>
+		</table>
+		</div>
+</div>
+</div>
+<br>
+
+{% endfor %}
+{% endblock content %}
